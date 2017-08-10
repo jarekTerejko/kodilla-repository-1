@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&subset=latin-ext')
+
+$main-font: 'Open Sans', sans-serif
+$nice-blue: #00C7E8
+$nice-dark: #313332
+$nice-white: #fff
+
+/* Column widths */
+.col-1 
+  width: 8.33%
+.col-2 
+  width: 16.66%
+.col-3 
+  width: 25%
+.col-4 
+  width: 33.33%
+.col-5 
+  width: 41.66%
+.col-6 
+  width: 50%
+.col-7 
+  width: 58.33%
+.col-8 
+  width: 66.66%
+.col-9 
+  width: 75%
+.col-10 
+  width: 83.33%
+.col-11 
+  width: 91.66%
+.col-12 
+  width: 100%
+
+[class*="col-"]
+  float: left
+
+* 
+  box-sizing: border-box
+
+body
+  margin: 0
+  font-family: $main-font
+
+.row::before,
+.row::after 
+  content: ""
+  display: table
+  clear: both
+  
+.container
+  max-width: 1200px
+  width: 100%
+  margin: 0 auto
+/*======HEADER NAV======*/
+header
+  background-color: #313234
+  min-height: 50px
+  @media (max-width: 425px)
+    text-align: center
+  nav
+    ul
+      list-style-type: none
+      margin: 0
+      padding: 0
+      float: right
+      @media (max-width: 425px)
+        float: none
+      li
+        display: inline-block
+        @media (max-width: 425px)
+          display: block
+        a
+          text-align: center
+          color: $nice-white       
+          text-decoration: none
+          text-transform: uppercase
+          line-height: 50px
+          padding: 0 20px
+          display: block
+          font-size: 14px
+          &:hover
+            background-color: #424345
+            color: $nice-blue
+    img 
+      padding: 10px 0
+      float: left
+      @media (max-width: 425px)
+        padding: 10px 0
+        float: none
+      
+/*======HERO======*/
+.hero
+  width: 100%
+  background: url(https://static.pexels.com/photos/251225/pexels-photo-251225.jpeg)
+  background-size: cover
+  background-position: center
+  height: 360px
+  padding: 100px 0
+  @media (min-width: 426px) and (max-width: 767px)
+    padding: 50px 30px
+  @media (max-width: 425px)
+    padding: 50px 10px
+
+.slogan
+  background-color: rgba(0, 0, 0, 0.5)
+  min-width: 550px
+  text-align: left
+  float: right
+  line-height: 40px
+  @media (min-width: 426px) and (max-width: 767px)
+    min-width: 55px
+    text-align: center
+    float: none
+    line-height: 40px
+  @media (max-width: 425px)
+    min-width: 55px
+    text-align: center
+    float: none
+    line-height: 40px
+  h1 
+    color: $nice-white
+    font-size: 36px
+    padding: 20px 25px
+    text-transform: uppercase
+    @media (min-width: 426px) and (max-width: 767px)
+      font-size: 30px
+      padding: 20px 25px
+    @media (max-width: 425px)
+      font-size: 30px
+      padding: 20px 25px
+    
+/*======ADVANTAGES SECTION======*/
+.section-container
+  margin: 40px auto
+  text-align: center
+  padding: 0 30px
+  @media (min-width: 426px) and (max-width: 767px)
+    margin: 5px auto
+    padding: 2px 50px
+  @media (max-width: 425px)
+    margin: 0 auto
+    padding: 0
+  h3, h2
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 24px
+
+.icon-head
+  display: inline-block
+  padding-top: 20px
+  cursor: pointer
+  &:hover .fa
+    background-color: $nice-blue
+  &:hover h3
+    color: $nice-blue
+  .fa
+    font-size: 60px
+    width: 80px
+    height: 80px
+    border-radius: 10px
+    line-height: 80px
+    background-color: $nice-dark
+    color: $nice-white
+    
+p
+  color: #c7c8b8
+  font-size: 16px
+  
+/*======GALLERY======*/
+.gallery 
+  img
+    width: 100%
+    height: 180px
+
+.layer-container
+  position: relative
+  overflow: hidden
+  height: 180px
+  &:hover .layer
+    display: block
+    cursor: pointer
+    
+.layer
+  background-color: rgba(0,0,0, 0.5)
+  width: 100%
+  height: 100%
+  position: absolute
+  display: none
+  text-align: center
+  .fa
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+    margin: 0 20px
+    font-size: 20px
+    color: black
+    width: 40px
+    height: 40px
+    text-align: center
+    line-height: 40px
+    background-color: $nice-white
+    border-radius: 5px
+      
+/*======WORKERS======*/
+.worker
+  margin: 100px auto
+  position: relative
+  max-width: 250px
+  max-height: 250px
+  text-align: center
+  border-radius: 50%
+  &:hover .overlay-container
+    display: block
+    cursor: pointer
+  @media (min-width: 768px) and (max-width: 1023px) 
+    margin: 0 auto
+    margin-top: 25px
+    margin-bottom: 55px
+  @media (min-width: 426px) and (max-width: 767px)
+    margin: 30px auto
+  @media (max-width: 425px)
+    margin: 20px auto
+  p
+    font-size: 20px
+    color: $nice-dark
+    font-weight: bold
+    @media (max-width: 425px)
+      font-size: 18px
+  .worker-img
+    height: 250px
+    max-width: 100%
+    border-radius: 50%
+  .overlay-container
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    height: 100%
+    width: 100%
+    display: none
+    background-color: rgba(0,0,0, 0.5)
+    border-radius: 50%
+    .text-worker-overlay
+      color: $nice-white
+      font-size: 20px
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%) 
+      
+/*======SECTION IPAD======*/
+.ipad-title
+  height: 400px
+  background-color: #838584
+  @media (min-width: 768px) and (max-width: 1023px) 
+    margin-top: 20px
+    height: auto
+  @media (min-width: 426px) and (max-width: 767px)
+    margin-top: 30px
+    height: auto
+    padding: 10px
+  @media (max-width: 425px)
+    margin-top: 30px
+    height: auto
+  h2
+    color: $nice-white
+    font-weight: 700
+    font-size: 36px
+    text-transform: uppercase
+    @media (min-width: 768px) and (max-width: 1023px)
+      margin-bottom: 0
+      padding-top: 0px
+      margin-left: 0px
+      font-size: 30px
+    @media (min-width: 426px) and (max-width: 767px)
+      text-align: center
+    @media (max-width: 425px)
+      padding-top: 0px
+      margin-left: 0
+      text-align: center
+        
+.ipad
+  img
+    width: 60%
+    float: left
+    height: 360px
+    border-top-left-radius: 20px
+    border-top-right-radius: 20px
+    margin-top: 40px
+    margin-left: 80px
+    @media (min-width: 768px) and (max-width: 1023px) 
+      max-width: 70%
+      float: none
+      height: 250px
+      border-top-left-radius: 20px
+      border-top-right-radius: 20px
+      margin-top: 40px
+      margin-left: 20px
+    @media (min-width: 426px) and (max-width: 767px)
+      width: 60%
+      float: none
+      height: auto
+      border-radius: 10px
+      display: block
+      margin: 0 auto
+    @media (max-width: 425px)
+      width: 100%
+      float: none
+      height: auto
+      border-radius: 10px
+      margin: 10px auto
+
+.description-1
+  @media (min-width: 426px) and (max-width: 767px)
+    text-align: justify
+  @media (max-width: 425px)
+    padding: 0
+    margin-left: 0
+    text-align: justify
+
+.left
+  width: 360px
+  float: left
+  @media (min-width: 768px) and (max-width: 1023px)
+    width: 280px
+    p
+      font-size: 14px
+  @media (min-width: 426px) and (max-width: 767px)
+    width: 100%
+    float: none
+  @media (max-width: 425px)
+    padding: 0
+    margin: 0
+    width: 100%
+    float: none
+      
+.right
+  float: left
+  width: 260px
+  margin-left: 50px
+  @media (min-width: 768px) and (max-width: 1023px)
+    float: left
+    width: 250px
+    margin-left: 0px
+    p
+      font-size: 14px
+  @media (min-width: 426px) and (max-width: 767px)
+    width: 100%
+    float: none
+    margin-left: 0
+  @media (max-width: 425px)
+    padding: 0
+    margin: 0
+    width: 100%
+    float: none
+    margin-left: 0
+
+/*======SECTION NUMBERS======*/
+.container-numbers
+  max-width: 1200px
+  margin: 40px auto
+  @media (max-width: 425px)
+    margin: 10px auto
+    
+.numbers
+  text-align: center
+  text-transform: uppercase
+  line-height: .3em
+  padding-top: 20px
+  padding-bottom: 25px
+  @media (max-width: 425px)
+    padding: 0px
+  h2
+    font-size: 60px
+  p
+    color: $nice-blue
+    font-weight: 700
+    font-size: 18px
+    
+/*======FOOTER======*/
+.footer-big
+  background-color: $nice-dark
+  @media (min-width: 426px) and (max-width: 767px)
+    padding: 10px
+  @media (max-width: 425px)
+    text-align: center
+
+.footer-container
+  @media (min-width: 768px) and (max-width: 1023px)
+    padding: 10px
+  h3
+    text-transform: uppercase
+    padding-bottom: 0
+    color: $nice-white
+    font-size: 28px
+    display: inline-block
+    @media (min-width: 768px) and (max-width: 1023px)
+      font-size: 24px
+    @media (max-width: 425px)
+      font-size: 24px
+ 
+.line 
+  border-top: 4px solid white
+  display: inline-block
+  width: 100px
+  height: 12px
+  margin-left: 5px
+  @media (min-width: 768px) and (max-width: 1023px)
+    width: 40px
+  @media (max-width: 425px)
+    width: 40px
+    height: 10px
+    
+.about-socials
+  p
+    margin-top: 13px
+    margin-right: 30px
+    @media (min-width: 768px) and (max-width: 1023px)
+      margin-right: 15px
+    @media (max-width: 425px)
+      margin-top: 0
+      margin-right: 0
+
+.get-in-touch-head 
+  p
+    font-weight: bold
+    
+.get-in-touch-head,
+.get-in-touch-descrp
+  min-height: 50px
+  @media (max-width: 425px)
+    margin: 0
+    padding: 0
+    min-height: 0
+
+.footer-socials 
+  .fa
+    display: inline-block
+    height: 35px
+    width: 35px
+    line-height: 35px
+    text-align: center
+    background-color: $nice-blue
+    color: $nice-white
+    font-size: 24px
+    margin-left: 10px
+    @media (min-width: 768px) and (max-width: 1023px)
+      height: 30px
+      width: 30px
+      line-height: 30px
+      font-size: 20px
+      margin-left: 1px
+    @media (max-width: 425px)
+      margin: 1px
+  .fa:first-child
+    margin-left: 0
+  .fa:hover
+    color: $nice-blue
+    background-color: $nice-white
+  
+
+.footer-small 
+  text-align: center
+  background-color: #252726
+  
+/*RWD COLS*/
+
+/*For desktop*/
+@media (min-width: 768px) and (max-width: 1023px)
+  .col-m-1 
+    width: 8.33%
+  .col-m-2 
+    width: 16.66%
+  .col-m-3 
+    width: 25%
+  .col-m-4 
+    width: 33.33%
+  .col-m-5 
+    width: 41.66%
+  .col-m-6 
+    width: 50%
+  .col-m-7 
+    width: 58.33%
+  .col-m-8 
+    width: 66.66%
+  .col-m-9 
+    width: 75%
+  .col-m-10 
+    width: 83.33%
+  .col-m-11 
+    width: 91.66%
+  .col-m-12 
+    width: 100%
+
+/* For tablets: */
+@media (min-width: 426px) and (max-width: 767px)
+  .col-s-1 
+    width: 8.33%
+  .col-s-2 
+    width: 16.66%
+  .col-s-3 
+    width: 25%
+  .col-s-4 
+    width: 33.33%
+  .col-s-5 
+    width: 41.66%
+  .col-s-6 
+    width: 50%
+  .col-s-7 
+    width: 58.33%
+  .col-s-8 
+    width: 66.66%
+  .col-s-9 
+    width: 75%
+  .col-s-10 
+    width: 83.33%
+  .col-s-11 
+    width: 91.66%
+  .col-s-12 
+    width: 100%
+    
+/*mobile*/
+@media (max-width: 425px)
+  [class*="col-"] 
+    width: 100%
+    padding: 12px
+    float: left
+	
