@@ -1,0 +1,30 @@
+{
+  "name": "kodilla-grunt-first-steps",
+  "version": "1.0.0",
+  "description": "first project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarekTerejko/kodilla-repository-1.git"
+  },
+  "keywords": [
+    "grunt",
+    "task",
+    "runner"
+  ],
+  "author": "jarek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jarekTerejko/kodilla-repository-1/issues"
+  },
+  "homepage": "https://github.com/jarekTerejko/kodilla-repository-1#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-imagemin": "^2.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
